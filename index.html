@@ -1,0 +1,846 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Utkarsh Sharma Portfolio</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    
+    <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/open-iconic-bootstrap.min.css">
+    <link rel="stylesheet" href="css/animate.css">
+    
+    <link rel="stylesheet" href="css/owl.carousel.min.css">
+    <link rel="stylesheet" href="css/owl.theme.default.min.css">
+    <link rel="stylesheet" href="css/magnific-popup.css">
+
+    <link rel="stylesheet" href="css/aos.css">
+
+    <link rel="stylesheet" href="css/ionicons.min.css">
+    
+    <link rel="stylesheet" href="css/flaticon.css">
+    <link rel="stylesheet" href="css/icomoon.css">
+    <link rel="stylesheet" href="css/style.css">
+
+
+
+<style>
+
+/*======================================
+//--//-->   ABOUT
+======================================*/
+
+.about-mf .box-shadow-full {
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+}
+
+.about-mf .about-img {
+  margin-bottom: 2rem;
+}
+
+.about-mf .about-img img {
+  margin-left: 10px;
+}
+
+
+.skill-mf .progress {
+  /* background-color: #cde1f8; */
+  margin: .5rem 0 1.2rem 0;
+  border-radius: 0;
+  height: .7rem;
+}
+
+.skill-mf .progress .progress-bar {
+  height: .7rem;
+  background-color: #ffbd39;
+}
+
+
+/* Animation styles */
+#typing-animation {
+  position: relative;
+  font-size: 30px;
+  font-weight: bold;
+  color: rgb(255, 255, 255);
+  overflow: hidden;
+  white-space: nowrap;
+  animation: typing 5s steps(20, end) infinite;
+}
+
+#typing-animation:before {
+  content: "";
+  /* position: absolute; */
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 100%;
+  background-color: #ccc;
+  animation: typing-cursor 1s ease-in-out infinite;
+}
+
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+@keyframes typing-cursor {
+  from {
+    width: 5px;
+  }
+  to {
+    width: 0;
+  }
+}
+
+
+/* project image zoom effect */
+
+.zoom-effect {
+  overflow: hidden;
+  transition: transform 0.3s ease-out;
+}
+
+.zoom-effect:hover {
+  transform: scale(1.1);
+}
+
+
+</style>
+
+
+  </head>
+  <body data-spy="scroll" data-target=".site-navbar-target" data-offset="300">
+	  
+	  
+    <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar ftco-navbar-light site-navbar-target" id="ftco-navbar">
+	    <div class="container">
+	      <a class="navbar-brand" href="index.html">Utkarsh Sharma</a>
+	      <button class="navbar-toggler js-fh5co-nav-toggle fh5co-nav-toggle" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
+	        <span class="oi oi-menu"></span> Menu
+	      </button>
+
+	      <div class="collapse navbar-collapse" id="ftco-nav">
+	        <ul class="navbar-nav nav ml-auto">
+	          <li class="nav-item"><a href="#home-section" class="nav-link"><span>Home</span></a></li>
+	          <li class="nav-item"><a href="#about-section" class="nav-link"><span>About</span></a></li>
+	          <li class="nav-item"><a href="#resume-section" class="nav-link"><span>Resume</span></a></li>
+	          <li class="nav-item"><a href="#project-section" class="nav-link"><span>Projects</span></a></li>
+	          <li class="nav-item"><a href="#contact-section" class="nav-link"><span>Contact</span></a></li>
+	        </ul>
+	      </div>
+	    </div>
+	  </nav>
+	  <section id="home-section" class="hero">
+		  <div class="home-slider  owl-carousel">
+	       <div class="slider-item ">
+	      	<div class="overlay"></div>
+	         <div class="container">
+	          <div class="row d-md-flex no-gutters slider-text align-items-end justify-content-end" data-scrollax-parent="true">
+	          	<div class="one-third js-fullheight order-md-last img" style="background-image:url(images/utkarsh_11.png);">
+	          	 <div class="overlay"></div>
+	          	</div>
+		          <div class="one-forth d-flex  align-items-center ftco-animate" data-scrollax=" properties: { translateY: '70%' }">
+		          	<div class="text">
+		          		<span class="subheading">Hello!</span>
+			            <h1 class="mb-4 mt-3">I'm <span>Utkarsh Sharma</span></h1>
+
+						<!-- Element to contain animated typing -->
+						<span id="typing-animation"></span>
+
+						<script>
+
+						// Initialize the typing animation
+						const typingAnimationElement = document.getElementById('typing-animation');
+
+						// Create an array of typing text
+						const typingTexts = [
+						'P M O',
+						'Project Management',
+						'Scrum Master',
+						'Data Analyst',
+						'Business Intelligence Analyst (BI Analyst)',
+						];
+
+						// Create a function to display the typing animation for a given text
+						function playTypingAnimation(text) {
+						// Loop through each character and add it to the element
+						for (let i = 0; i < text.length; i++) {
+							setTimeout(() => {
+							typingAnimationElement.textContent += text[i];
+							}, i * 200); // Increase the delay to slow down the typing animation
+						}
+
+						// Once the animation is complete, reset the text and start over
+						setTimeout(() => {
+							typingAnimationElement.textContent = '';
+							playTypingAnimation(typingTexts[(typingTexts.indexOf(text) + 1) % typingTexts.length]);
+						}, text.length * 200);
+						}
+
+						// Start the typing animation loop
+						playTypingAnimation(typingTexts[0]);
+
+						</script>
+
+						<br>
+						<br>
+			            <h2> PMO, Project Management, Scrum Master, Data Analyst & Business Intelligence Analyst (BI Analyst)</h2>
+						<!-- <h2 class="d-flex" style="margin-bottom: 0">With over 5 years of experience</h2> -->
+						<!-- <br> -->
+			            <p><a href="https://www.youtube.com/@Ride_Trip_ToUrS">YouTube</a> 
+							<a href="https://github.com/u-sharma22" class="btn btn-white btn-outline-white py-3 px-4">Github</a>
+							<a href="https://www.linkedin.com/in/utkarsh-sharma-b9a074140/" class="btn btn-white btn-outline-white py-3 px-4">LinkedIn</a>
+						</p>
+		            </div>
+		          </div>
+	        	</div>
+	        </div>
+	      </div>
+		</div>
+    </section>
+
+
+
+    <section class="ftco-about img ftco-section ftco-no-pb" id="about-section">
+    	<div class="container">
+			<div class="row">
+				<div class="row d-flex align-items-stretch">
+				<!-- <div class="row d-flex"> -->
+					<div class="col-md-6 col-lg-5 d-flex">
+						<div class="img-about img d-flex align-items-stretch">
+							<div class="overlay">
+								<div class="row">
+									<div class="col-sm-6 col-md-5">
+									  <div class="about-img">
+										<img src="images/MyPhoto_Utkarsh.jpg" class="img-fluid rounded b-shadow-a" alt="">
+									  </div>
+									</div>
+									<!-- Details next to profile image -->
+									<div class="col-sm-6 col-md-7">
+									  <div class="about-info">
+										<p><span class="title-s"><strong style="color: white;">Name:</strong></span> <span>Utkarsh Sharma</span></p>
+										<p><span class="title-s"><strong style="color: white;">Job Role: </strong></span> <span>A PMO, Data Analyst & Business Intelligence</span></p>
+										<p><span class="title-s"><strong style="color: white;">Experience: </strong></span> <span>5 Years 3 Months</span></p>
+										<p><span class="title-s"><strong style="color: white;">Address: </strong>Address: </span> <span>Ghaziabad, UP, India</span></p>
+									  </div>
+									</div>
+								  </div>
+
+								<div class="skill-mf">
+									<h4 class="title-s">Skills</h4>
+									<h5>Data Analytics & Business Intelligence:</h5> 
+									<span>SQL, Power BI, Tableau, Reporting and Dashboards, Analysis and Reporting Data Visualization, Data Modeling, Excel, Business Intelligence (BI) Reporting, KPI Dashboards</span>
+									
+									<h5>Data Quality & Optimization:</h5> 
+									<span> Data Cleaning, Performance Optimization, Data Transformation, Data Integrity & Quality Management</span>
+
+									<h5>Project & Process Management:</h5> 
+									<span>Agile, Scrum, Waterfall, PMI-ACP, Jira, Risk Management, Process Improvement, Operations Management, Project Life Cycle, Resource Allocation, Sprint Planning, Risk Management, Change Management, MS Office, Sharepoint, Project Management, Task Prioritization</span>
+
+									<h5>Application & Incident Management:</h5> 
+									<span>CRM, Salesforce, Azure, ZOHO, Ticketing Systems, ServiceNow, Automation in Ticketing Systems, Root Cause Analysis (RCA), SLA Management</span>
+
+									<h5>Stakeholder Management:</h5> 
+									<span>Cross-Functional Collaboration, Client Communication, Reporting, Team Handling, Team Management</span>
+						
+									
+									
+									
+									<!-- <span class="pull-right">95%</span>
+									<div class="progress">
+										<div class="progress-bar" role="progressbar" style="width: 95%;" aria-valuenow="95" aria-valuemin="0"
+											aria-valuemax="100"></div>
+									</div> -->
+									
+									<!-- <span>PYTHON</span> <span class="pull-right">85%</span>
+									<div class="progress">
+										<div class="progress-bar" role="progressbar" style="width: 85%" aria-valuenow="85" aria-valuemin="0"
+											aria-valuemax="100"></div>
+									</div>
+									
+									<span>Data Visualization</span> <span class="pull-right">90%</span>
+									<div class="progress">
+										<div class="progress-bar" role="progressbar" style="width: 90%" aria-valuenow="90" aria-valuemin="0"
+											aria-valuemax="100"></div>
+									</div>
+									
+									<span>Statistical Analysis</span> <span class="pull-right">85%</span>
+									<div class="progress">
+										<div class="progress-bar" role="progressbar" style="width: 85%" aria-valuenow="85" aria-valuemin="0"
+											aria-valuemax="100"></div>
+									</div>
+									
+									<span>Machine Learning</span> <span class="pull-right">80%</span>
+									<div class="progress">
+										<div class="progress-bar" role="progressbar" style="width: 80%" aria-valuenow="80" aria-valuemin="0"
+											aria-valuemax="100"></div>
+									</div> -->
+								</div>
+							</div>
+						</div>
+					</div>
+					
+					<div class="col-md-6 col-lg-7 pl-lg-5 pb-5">
+						<div class="row justify-content-start pb-3">
+							<div class="col-md-12 heading-section ftco-animate">
+								
+								<h1 class="big">About</h1>
+								<h2 class="mb-4">About Me</h2>
+								
+								<p>Results-driven and skilled <strong>Data Analyst & Project Manager</strong> with <strong>5 years of experience</strong> in <strong>data analytics, business 
+									intelligence, and project execution.</strong> <strong>Skilled & Certified SQL, Power BI, Tableau, Excel</strong> and other data visualization tools to transform 
+									raw data into actionable insights. <strong>PMI-ACP Certified</strong>, with expertise in <strong>Agile and Waterfall methodologies, incident 
+									management, stakeholder collaboration, process improvement</strong>, and <strong>operations management</strong>. Adept at leading cross
+									functional teams, improving <strong>data quality</strong> and streamlining business processes.</p>
+								<ul class="about-info mt-4 px-md-0 px-2">
+									<li class="d-flex"><span>Profile:</span> <span>PMO &amp; Data Analytics</span></li>
+									<li class="d-flex"><span>Domain:</span> <span>Retail, Ecommerce, BFSI, Healthcare, WFM &amp; Digital Marketing</span></li>
+									<li class="d-flex"><span>Education:</span> <span>Bachelor of Technology: CSE</span></li>
+									<li class="d-flex"><span>Language:</span> <span>English, Hindi</span></li>
+									<li class="d-flex"><span>BI Tools:</span> <span>Microsoft Power BI &amp; Tableau</span></li>
+									<li class="d-flex"><span>Other Skills:</span> <span>ZOHO, Salesforce, CRM, Azure Cloud, Excel, Git, JIRA, Asana, Google Analytics, Project life cycle, SLA Management, Change Management &amp; Release Management</span></li>
+									<li class="d-flex"><span>Interest:</span> <span>Traveling, Riding, Nature Photography &amp; Technical Reading</span></li>
+									
+								</ul>
+							</div>
+						</div>
+
+
+						<div class="counter-wrap ftco-animate d-flex mt-md-3">
+							<div class="text">
+								<p class="mb-4">
+									<span class="number" data-number="30">0</span> <span>+</span>
+									<span>&nbsp; Projects completed</span>
+								</p>
+								<p><a href="https://www.linkedin.com/in/utkarsh-sharma-b9a074140/" class="btn btn-primary py-3 px-3">LinkedIn</a>
+									<a href="https://github.com/u-sharma22" class="btn btn-white btn-outline-white py-3 px-4">Github</a></p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+    </section>
+
+
+
+	
+    <section class="ftco-section ftco-no-pb" id="resume-section">
+    	<div class="container">
+    		<div class="row justify-content-center pb-5">
+          <div class="col-md-10 heading-section text-center ftco-animate">
+          	<h1 class="big big-2">Resume</h1>
+            <h2 class="mb-4">Resume</h2>
+            <p><strong>Data Analyst & Project Manager</strong> with <strong>5 years of experience</strong> in <strong>data analytics, business 
+				intelligence, and project execution.</strong> <strong>Skilled & Certified SQL, Power BI, Tableau, Excel</strong> and other data visualization tools to transform 
+				raw data into actionable insights. <strong>PMI-ACP Certified</strong>, with expertise in <strong>Agile and Waterfall methodologies, incident 
+				management, stakeholder collaboration, process improvement</strong>, and <strong>operations management</strong>. Adept at leading cross
+				functional teams, improving <strong>data quality</strong> and streamlining business processes. Looking for opportunities in <strong>Data Analytics, Business Intelligence, and Project Management</strong> to drive data-driven decision-making and operational efficiency.</p>
+          </div>
+        </div>
+
+		<div class="row">
+			<h1 class="big-4">Experience</h1>
+			<div class="underline"></div>
+		</div>
+		<br>
+		
+		<div class="row">
+				<div class="col-md-6">
+					<div class="resume-wrap ftco-animate">
+						<span class="date">MAR 2024 - PRESENT </span>
+						<h2>Assistant Manager </h2>
+						<h6>Development || Analytics || Innovation & Strategy</h6>
+						<span class="position">Bill Gosling India Pvt Ltd</span>
+						<p class="mt-4">
+							<ul>
+								<li>Developed and maintained <strong>comprehensive reports</strong> for <strong>80+ projects,</strong> improving <strong>reporting accuracy by 40%.</strong></li>
+								<li>Facilitated with <strong>data analysts, data scientists,</strong> and <strong>project managers </strong>to assess <strong>data quality</strong> and <strong>decision making</strong>.</li>
+								<li>Optimized data fields in ZOHO, <strong>reducing processing time</strong> and <strong>improving ticketing efficiency</strong> and <strong>business requirements</strong>, enhancing data structure and analysis capabilities.</li>
+								<li>Created SDLC each phase document and <strong>maintained documentation</strong> that <strong>improved development processes, releases</strong> and <strong>data analysis</strong> in response to <strong>internal audits,</strong> ensuring <strong>data quality</strong> and <strong>tracking.</strong></li>
+								<li>Conducted end-to-end data collection for over <strong>10 research projects</strong>, employing both <strong>qualitative</strong> and <strong>quantitative</strong> methods.</li>
+								<li><strong>Trained </strong>a team of <strong>35+ developers & analysts </strong>on <strong>SDLC Agile and Waterfall methodlogies</strong> best practices for <strong>maintaining data quality</strong> and using reporting tools, <strong>reducing errors by 70%.</strong></li>
+							</ul>
+						</p>
+					</div>
+
+				</div>
+
+				<div class="col-md-6">
+					<div class="resume-wrap ftco-animate">
+						<span class="date">AUG 2023-FEB 2024 </span>
+						<h2>Project Coordinator</h2>
+						<span class="position">Redian Software Pvt Ltd</span>
+						<p class="mt-4">
+							<ul>
+								<li><strong>Analyzed</strong> project metrics and generated <strong>status reports</strong>; facilitated data-driven <strong>communication among teams & stakeholders.</strong> </li>
+								<li>Assessed projects across domains (Energy, CRM, custom apps) using <strong>Python, PHP, ZOHO, Salesforce, and JavaScript.</strong> </li>
+								<li><strong>Managed project Scope, SRS & Release documentation</strong> and supported <strong>risk management</strong> with <strong>data insights.</strong></li>
+								<li>Optimized <strong>planning and execution </strong>processes to meet deadlines and resource needs. Implemented <strong>data-driven </strong> to improve <strong>project delivery</strong> and <strong>manage multiple projects on SDLC Agile and Waterfall methodologies</strong>. </li>
+								<li>Utilized tools like <strong>Asana, Jira, Redmine, OneDrive, SharePoint, & MS Office</strong> for <strong>project analysis and reporting.</strong></li>
+							</ul>
+						</p>
+					</div>
+
+				</div>
+
+				<div class="col-md-6">
+					<div class="resume-wrap ftco-animate">
+						<span class="date">DEC 2021-AUG 2023</span>
+						<h2>Associate </h2>
+						<span class="position">Corbus India LLP</span>
+						<p class="mt-4">
+							<ul>
+								<li>Handled many Projects, <strong>API flows, regular monitoring, resolution, performed Security operations</strong> on many applications.</li>
+								<li><strong>Managing applications, coordinating with developers, support and clients,</strong> managing JIRA and ticketing tool <strong>(ServiceNow)</strong> tracking issues, updating to managers and stakeholders.</li>
+								<li>Work closely with stakeholders/clients, for understanding the system's <strong>Scope, SRS project requirements </strong> in defining the Product Vision.</li>
+								<li><strong>Monitoring and managing </strong>on AZURE, ServiceNow, Jira.</li>
+							</ul>
+						</p>
+					</div>
+
+				</div>
+
+				<div class="col-md-6">
+					<div class="resume-wrap ftco-animate">
+						<span class="date">AUG 2020-DEC 2021 </span>
+						<h2>IT Analyst </h2>
+						<span class="position">NRP INFORMATICS</span>
+						<p class="mt-4">
+							<ul>
+								<li>Understanding business and technology needs, <strong>designing, analyzing</strong> and <strong>implementing efficient solutions.</strong></li>
+								<li>Gathering feedback from end users to continue <strong>improving systems.</strong> Coordinate with developers to <strong>build & implement technology solutions</strong> and technical training.</li>
+								<li>Drive product launches including working with the <strong>public relations team, executives,</strong> and other <strong>product management</strong> team members.</li>
+							</ul>
+						</p>
+					</div>
+
+				</div>
+
+				<div class="col-md-6">
+					<div class="resume-wrap ftco-animate">
+						<span class="date">DEC 2019-AUG 2020 </span>
+						<h2>Project Coordinator</h2>
+						<span class="position">STPL</span>
+						<p class="mt-4"> 
+							<ul>
+								<li><strong>Track project progress</strong> in terms of <strong>time, quality, & cost.</strong> Management of multiple projects, including <strong>budgeting</strong> in a fast-paced environment.</li>
+								<li>Resolve questions and issues in a timely and effective manner for linguistics and internal teams. Manage the timely flow of all project actions from initiation to <strong>project delivery</strong>, ensuring that projects meet <strong>quality, turn-around time, & budget</strong> expectations. </li>
+							</ul>
+						</p>
+					</div>
+
+				</div>
+	
+			</div>
+
+		<br>
+		<br>
+
+		<div class="row">
+			<h1 class="big-4">Certification</h1>
+			<div class="underline"></div>
+		</div>
+		<br>
+
+			<div class="row">
+    			<div class="col-md-6">
+    				<div class="resume-wrap ftco-animate">
+    					<span class="date">Gold Winner (Q4-2024)</span>
+    					<h2> Awarded for outstanding performance at Bill Gosling India Pvt Ltd.</h2>
+    					<!-- <span class="position">AKTU</span>
+    					<p class="mt-4">Grade: First class distinction.</p> -->
+    				</div>
+    			</div>
+
+				<div class="col-md-6">
+    				<div class="resume-wrap ftco-animate">
+    					<span class="date">Data Science Pro Program</span>
+    					<h2> FingerTips </h2>
+    					<!-- <span class="position">AKTU</span>
+    					<p class="mt-4">Grade: First class distinction.</p> -->
+    				</div>
+    			</div>
+				<div class="col-md-6">
+    				<div class="resume-wrap ftco-animate">
+    					<span class="date">SQL - MySQL for Data Analytics and Business Intelligence</span>
+    					<h2> Udemy </h2>
+    					<!-- <span class="position">AKTU</span>
+    					<p class="mt-4">Grade: First class distinction.</p> -->
+    				</div>
+    			</div>
+				<div class="col-md-6">
+    				<div class="resume-wrap ftco-animate">
+    					<span class="date">Microsoft Power BI Desktop for Business Intelligence</span>
+    					<h2>Udemy</h2>
+    					<!-- <span class="position">AKTU</span>
+    					<p class="mt-4">Grade: First class distinction.</p> -->
+    				</div>
+				</div>
+				<div class="col-md-6">
+					<div class="resume-wrap ftco-animate">
+    					<span class="date">Agile Certified Practitioner Training Program (PMI-ACP) </span>
+    					<h2>Udemy</h2>
+    					<!-- <span class="position">AKTU</span>
+    					<p class="mt-4">Grade: First class distinction.</p> -->
+    				</div>
+    			</div>
+				<div class="col-md-6">
+					<div class="resume-wrap ftco-animate">
+    					<span class="date">Other Achievements </span>
+    					<li><strong>Challenge- </strong>Secured top position in an internal analytics competition for data-driven insights. </li>
+						<li><strong>Client Appreciation- </strong>Recognized by clients for delivering high-quality data reports and business intelligence solutions.</li>
+						<li><strong>Best Project Execution Prize- </strong>Honored for successfully managing and delivering multiple high-impact projects on time. </li>
+						<li><strong>Fun Activity Champion- </strong>Won corporate fun activities and team-building games, fostering a positive work culture.</li>
+						<li><strong>Spot Prize- </strong>Received appreciation from senior management for process improvements and stakeholder collaboration. </li>
+    					<!-- <span class="position">AKTU</span>
+    					<p class="mt-4">Grade: First class distinction.</p> -->
+    				</div>
+    			</div>
+			</div>
+
+			<div class="row">
+				<h1 class="big-4">Education</h1>
+				<div class="underline"></div>
+			</div>
+			<br>
+			
+				<div class="row">
+					<div class="col-md-6">
+						<div class="resume-wrap ftco-animate">
+							<span class="date">2015-2019</span>
+							<h2>Bachelor of Technology (B.Tech)</h2>
+							<h5>Computer Science and Engineering</h5>
+							<span class="position">AKTU</span>
+							<!-- <p class="mt-4">Grade: First class distinction.</p> -->
+						</div>
+					</div>
+
+					<div class="col-md-6">
+						<div class="resume-wrap ftco-animate">
+							<span class="date">2014-2015</span>
+							<h2>Higher Secondary School/Senior Secondary Certificate</h2>
+							<span class="position">Dehradun Public School</span>
+							<!-- <p class="mt-4">percentage: First class distinction.</p> -->
+						</div>
+					</div>
+
+					<div class="col-md-6">
+						<div class="resume-wrap ftco-animate">
+							<span class="date">2012-2013</span>
+							<h2>High School/Secondary School Certificate</h2>
+							<span class="position">Dehradun Public School</span>
+							<!-- <p class="mt-4">Grade: First class distinction.</p> -->
+						</div>
+					</div>
+				</div>
+
+    		<div class="row justify-content-center mt-5">
+    			<div class="col-md-6 text-center ftco-animate">
+    				<p><a href="https://drive.google.com/drive/folders/1FNgPzQsw8DZ_fGaG4RkI0FNDVDisL3ZL?usp=sharing" class="btn btn-primary py-4 px-5">Download CV</a></p>
+    			</div>
+    		</div>
+    	</div>
+    </section>
+
+   
+
+    <section class="ftco-section" id="project-section">
+      <div class="container">
+        <div class="row justify-content-center mb-5 pb-5">
+          <div class="col-md-7 heading-section text-center ftco-animate">
+            <h1 class="big big-2">Projects</h1>
+            <h2 class="mb-4">Projects</h2>
+            <p>Below are the sample Data Analytics projects on SQL, Power BI & Tableau.</p>
+          </div>
+        </div>
+        <div class="row d-flex">
+          <div class="col-md-4 d-flex ftco-animate">
+          	<div class="blog-entry justify-content-end">
+              <a href="https://github.com/u-sharma22/AIR_BNB_SQL-Project/blob/main/My%20Solution/SQL%20Airbnb%20Hospitality%20Project%202%20new17075530230.sql" class="block-20 zoom-effect" style="background-image: url('images/image_airbnb.jpg');">
+              </a>
+              <div class="text mt-3 float-right d-block">
+
+                <h3 class="heading"><a href="https://github.com/u-sharma22/AIR_BNB_SQL-Project/blob/main/My%20Solution/SQL%20Airbnb%20Hospitality%20Project%202%20new17075530230.sql">Airbnb-Hospitality Intelligence Hub Data Analysis using SQL</a></h3>
+                <p>Analyzed Airbnb-Hospitality Intelligence Hub data using advanced SQL queires to identify gaps and increase the business growth.</p>
+              </div>
+            </div>
+          </div>
+
+		  <div class="col-md-4 d-flex ftco-animate">
+          	<div class="blog-entry justify-content-end">
+              <a href="https://github.com/u-sharma22/SQL-Project-Sky-Sports/blob/main/My%20Solutions%20queries/Project%20Sky_Sports.sql" class="block-20 zoom-effect" style="background-image: url('images/skysports_fifa.jpg');">
+              </a>
+              <div class="text mt-3 float-right d-block">
+
+                <h3 class="heading"><a href="https://github.com/u-sharma22/SQL-Project-Sky-Sports/blob/main/My%20Solutions%20queries/Project%20Sky_Sports.sql">Sky Sports Channel's Data Analysis using SQL</a></h3>
+                <p>Sky Sports Channel's coverage of the FIFA World Cup includes a post-match TV program called "Football Digest: Post Match Analysis". Football Pundits on the show discusses about the insights and game play as per their expertise and insights derived by the Sports Analyst at the backend.</p>
+              </div>
+            </div>
+          </div>
+
+		  <div class="col-md-4 d-flex ftco-animate">
+          	<div class="blog-entry justify-content-end">
+              <a href="https://github.com/u-sharma22/SQL-Project-Blinkit-Grocery-Product-Analysis-update/blob/main/MY%20Solution/Blinkit.sql" class="block-20 zoom-effect" style="background-image: url('images/blinkit.jpg');">
+              </a>
+              <div class="text mt-3 float-right d-block">
+
+                <h3 class="heading"><a href="https://github.com/u-sharma22/SQL-Project-Blinkit-Grocery-Product-Analysis-update/blob/main/MY%20Solution/Blinkit.sql">Blinkit-Grocery Product Analysis using SQL</a></h3>
+                <p>Blinkit-Grocery Product Analysis track sales trends, analyze customer behavior, and identify areas for improvement to analyze their data and make informed, data-driven decisions.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-4 d-flex ftco-animate">
+          	<div class="blog-entry justify-content-end">
+              <a href="https://github.com/u-sharma22/Maven_Market_PowerBI_Project/blob/main/maven_market.JPG" class="block-20 zoom-effect" style="background-image: url('images/maven_market.JPG');">
+              </a>
+              <div class="text mt-3 float-right d-block">
+
+                <h3 class="heading"><a href="https://github.com/u-sharma22/Maven_Market_PowerBI_Project/blob/main/maven_market.JPG">Maven Market Power BI project involved analyzing and visualizing sales, profit, and return data from grocery stores in the United States, Canada, and Mexico.</a></h3>
+                <p>The Maven Market Power BI project involved analyzing and visualizing sales, profit, and return data from grocery stores in the United States, Canada, and Mexico. Key insights revealed that Canadian stores were underperforming with low sales and high return rates, prompting a recommendation to close these stores. The project provided valuable experience in data transformation, DAX functions, and creating impactful business insights through Power BI.</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 d-flex ftco-animate">
+          	<div class="blog-entry">
+              <a href="https://github.com/u-sharma22/Adventure_works_PowerBI_Project/blob/main/AdventureWorks%20PBIX%20Files/Adventure_works.JPG" class="block-20 zoom-effect" style="background-image: url('images/Adventure_works.JPG');">
+              </a>
+              <div class="text mt-3 float-right d-block">
+
+                <h3 class="heading"><a href="https://github.com/u-sharma22/Adventure_works_PowerBI_Project/blob/main/AdventureWorks%20PBIX%20Files/Adventure_works.JPG">Adventure_Works_PowerBI Reporting and Dashboards Project for data insights and analyzation</a></h3>
+                <p>This project uses Power BI to visualize and analyze sales, returns, and product data from the hypothetical Adventure Works bike shop, focusing on learning key Power BI features like DAX, data modeling, and interactive dashboards. It includes dashboards for executive insights, product and customer KPIs, and a decomposition tree for detailed analysis.</p>
+              </div>
+            </div>
+          </div>
+		  <div class="col-md-4 d-flex ftco-animate">
+          	<div class="blog-entry">
+              <a href="https://github.com/u-sharma22/Credit_Card_PowerBI_Project/blob/main/cc_cust_dash.JPG" class="block-20 zoom-effect" style="background-image: url('images/cc_cust_dash.JPG');">
+              </a>
+              <div class="text mt-3 float-right d-block">
+
+                <h3 class="heading"><a href="https://github.com/u-sharma22/Credit_Card_PowerBI_Project/blob/main/cc_cust_dash.JPG"> Credit_Card_PowerBI_Project Credit Card & Customer Finance analysis</a></h3>
+                <p>he Credit Card Power BI project focuses on analyzing credit card transactions and customer financial data to uncover key insights about spending patterns, credit utilization, and repayment behaviors. It includes interactive dashboards that provide a detailed overview of customer segments, transaction trends, and financial health. The project demonstrates advanced Power BI techniques such as DAX, data modeling, and visualization to support data-driven decision-making in the financial sector.</p>
+              </div>
+            </div>
+          </div>
+		  <div class="col-md-4 d-flex ftco-animate">
+          	<div class="blog-entry">
+              <a href="https://github.com/u-sharma22/ML-Linear-Regression-Home-Price-Prediction-Analysis-Project/blob/main/ML%20Linear%20Regression%20Home%20Price%20Prediction%20%26%20Analysis%20Project%20%20Solution16932049650.ipynb" class="block-20 zoom-effect" style="background-image: url('images/house_price.jpg');">
+              </a>
+              <div class="text mt-3 float-right d-block">
+
+                <h3 class="heading"><a href="https://github.com/u-sharma22/ML-Linear-Regression-Home-Price-Prediction-Analysis-Project/blob/main/ML%20Linear%20Regression%20Home%20Price%20Prediction%20%26%20Analysis%20Project%20%20Solution16932049650.ipynb">Linear Regression Model for Predicting Home Prices and Property Analysis.</a></h3>
+                <p>The ML Linear Regression Home Price Prediction project uses a dataset containing various property features to predict house prices, with a focus on data preprocessing and model optimization. It employs techniques like feature engineering, linear regression, and performance evaluation, including Ridge and Lasso regression to improve accuracy and avoid overfitting.</p>
+              </div>
+            </div>
+          </div>
+
+		  <div class="col-md-4 d-flex ftco-animate">
+          	<div class="blog-entry">
+              <a href="https://public.tableau.com/app/profile/utkarsh.sharma2911/viz/Project2Video_games/Dashboard1" class="block-20 zoom-effect" style="background-image: url('images/video_games.JPG');">
+              </a>
+              <div class="text mt-3 float-right d-block">
+
+                <h3 class="heading"><a href="https://github.com/u-sharma22/Video_Games_Tableau_Project/blob/main/video_games.JPG">Video Game Industry Analysis: Uncovering Sales Trends, User Preferences, and Market Insights for Strategic Decision-Making at Epic Games</a></h3>
+                <p>As a Business Analyst at Epic Games, I analyzed the "Video_Games" dataset to uncover trends in game popularity, sales performance, user engagement, and critical acclaim across platforms, genres, and regions. Using data visualizations like highlight tables, bar charts, funnel charts, and KPI cards, I built an interactive dashboard and story that empower strategic decision-making and enhance understanding of the global gaming landscape.</p>
+              </div>
+            </div>
+          </div>
+
+		  <div class="col-md-4 d-flex ftco-animate">
+          	<div class="blog-entry">
+              <a href="https://public.tableau.com/app/profile/utkarsh.sharma2911/viz/Project1Blinkit_17134434455120/Dashboard1" class="block-20 zoom-effect" style="background-image: url('images/blinkit_dash.JPG');">
+              </a>
+              <div class="text mt-3 float-right d-block">
+
+                <h3 class="heading"><a href="https://github.com/u-sharma22/Blinkit_Tableau_Project1/blob/main/Solution/blinkit_dash.JPG">Blinkit Grocery Sales Analysis: Enhancing Retail Strategy through Data-Driven Insights in Tableau.</a></h3>
+                <p>As a Data Analyst at Blinkit, I utilized Tableau to analyze the "Grocery Sales" dataset, uncovering key insights into top-selling items, outlet performance, pricing trends, and customer preferences. Through interactive dashboards and visualizations aligned with Blinkit's branding, I provided strategic recommendations to optimize sales, improve store layouts, and enhance the customer shopping experience.</p>
+              </div>
+            </div>
+          </div>
+		  <div class="col-md-4 d-flex ftco-animate">
+          	<div class="blog-entry">
+              <a href="https://public.tableau.com/app/profile/utkarsh.sharma2911/viz/Project1EmployeesDashboard/Dashboard1" class="block-20 zoom-effect" style="background-image: url('images/emp_dash.png');">
+              </a>
+              <div class="text mt-3 float-right d-block">
+
+                <h3 class="heading"><a href="https://public.tableau.com/app/profile/utkarsh.sharma2911/viz/Project1EmployeesDashboard/Dashboard1">Employee Performance Dashboard: Driving HR Decisions with Data-Driven Insights</a></h3>
+                <p>I designed an interactive Employee Dashboard using Tableau to analyze workforce performance, departmental distribution, attrition trends, and compensation insights. This dashboard empowers HR and leadership teams to make informed decisions regarding talent management, employee engagement, and organizational growth strategies.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+	<br>
+
+		
+    </section>
+
+	<section class="ftco-section ftco-no-pt ftco-no-pb ftco-counter img" id="section-counter">
+      <div class="container">
+		<div class="row d-md-flex align-items-center">
+          <div class="col-md d-flex justify-content-center counter-wrap ftco-animate">
+            <div class="block-18">
+              <div class="text">
+                <strong class="number" data-number="20">0</strong>			
+                <span>Achievements</span>
+              </div>
+            </div>
+          </div>
+          <div class="col-md d-flex justify-content-center counter-wrap ftco-animate">
+            <div class="block-18">
+              <div class="text">
+                <strong class="number" data-number="30">0</strong>
+                <span>Projects</span>
+              </div>
+            </div>
+          </div>
+          <div class="col-md d-flex justify-content-center counter-wrap ftco-animate">
+            <div class="block-18">
+              <div class="text">
+                <strong class="number" data-number="4">0</strong>
+                <span>Certifications</span>
+              </div>
+            </div>
+          </div>
+          <div class="col-md d-flex justify-content-center counter-wrap ftco-animate">
+            <div class="block-18">
+              <div class="text">
+                <strong class="number" data-number="35">0</strong>
+                <span>Team Handled</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+	
+	  <div class="ftco-section ftco-hireme img margin-top" style="background-image: url(images/bg_1.jpg)">
+			<!-- <div class="container"> -->
+				<div class="row justify-content-center">
+					<div class="col-md-7 ftco-animate text-center">
+						<h2>More projects on<span> Github  </span> </h2>
+						<div class="heading"> <h4> I am deeply passionate about transforming complex data into meaningful insights that drive strategic decisions. I love working on data-driven solutions, crafting intuitive dashboards, and leading cross-functional teams through successful project execution. Solving real business problems using analytics, automation, and agile processes keeps me motivated. I enjoy building systems that enhance efficiency, transparency, and impact, and I take pride in bridging the gap between technical solutions and business goals. Whether its streamlining workflows, optimizing data quality, or collaborating with stakeholders—I thrive on making a measurable difference.</h4>
+						<br>
+						<p><a href="https://github.com/u-sharma22" class="btn btn-primary py-3 px-5">GitHub</a></p>
+						</div>
+					</div>
+				</div>
+			<!-- </div> -->
+		</div>
+	</section>
+
+
+
+    <section class="ftco-section contact-section ftco-no-pb" id="contact-section">
+      <div class="container">
+      	<div class="row justify-content-center mb-5 pb-3">
+          <div class="col-md-7 heading-section text-center ftco-animate">
+            <h1 class="big big-2">Contact</h1>
+            <h2 class="mb-4">Contact Me</h2>
+            <p>Below are the details to reach out to me!</p>
+          </div>
+        </div>
+
+        <div class="row d-flex contact-info mb-5">
+          <div class="col-md-6 col-lg-3 d-flex ftco-animate">
+          	<div class="align-self-stretch box p-4 text-center">
+          		<div class="icon d-flex align-items-center justify-content-center">
+          			<span class="icon-map-signs"></span>
+          		</div>
+          		<h3 class="mb-4">Address</h3>
+	            <p><a href="#">Ghaziabad, UP, India</p>
+	          </div>
+          </div>
+          <div class="col-md-6 col-lg-3 d-flex ftco-animate">
+          	<div class="align-self-stretch box p-4 text-center">
+          		<div class="icon d-flex align-items-center justify-content-center">
+          			<a href="tel:+918929450526"><span class="icon-phone2"></span></a>
+          		</div>
+          		<h3 class="mb-4"><a href="tel:+918929450526">Contact Number</a></h3>
+	            <p><a href="tel:+918929450526">+918929450526</a></p>
+	          </div>
+          </div>
+          <div class="col-md-6 col-lg-3 d-flex ftco-animate">
+          	<div class="align-self-stretch box p-4 text-center">
+          		<div class="icon d-flex align-items-center justify-content-center">
+          			<a href="mailto:utkarsharma97@gmil.com"><span class="icon-paper-plane"></span></a>
+          		</div>
+          		<h3 class="mb-4"><a href="mailto:utkarsharma97@gmil.com">Email Address</a></h3>
+	            <p><a href="mailto:utkarsharma97@gmil.com">utkarsharma97@gmil.com</a></p>
+	          </div>
+          </div>
+          <div class="col-md-6 col-lg-3 d-flex ftco-animate">
+          	<div class="align-self-stretch box p-4 text-center">
+          		<div class="icon d-flex align-items-center justify-content-center">
+          			<a href="https://drive.google.com/drive/folders/1FNgPzQsw8DZ_fGaG4RkI0FNDVDisL3ZL?usp=sharing"><span class="icon-globe"></span></a>
+          		</div>
+          		<h3 class="mb-4"><a href="https://drive.google.com/drive/folders/1FNgPzQsw8DZ_fGaG4RkI0FNDVDisL3ZL?usp=sharing">Download Resume</a></h3>
+	            <p><a href="https://drive.google.com/drive/folders/1FNgPzQsw8DZ_fGaG4RkI0FNDVDisL3ZL?usp=sharing">Resume link</a></p>
+	          </div>
+          </div>
+
+		  <div class="container">
+			<br>
+			<br>
+			<!-- <div class="row justify-content-center">
+				<div class="col-md-7 ftco-animate text-center">
+					<h2>Have a<span> Question?  </span> <a href="https://forms.gle/uLaTShUKXraAvHJ77" class="btn btn-primary py-3 px-5">Click Here</a> </h2>
+				</div>
+			</div> -->
+				<br>
+					<ul class="ftco-footer-social list-unstyled d-flex justify-content-center align-items-center mb-0">
+					  <li class="ftco-animate normal-txt">Find me on  </li>
+					  <li class="ftco-animate"><a href="https://www.youtube.com/@Ride_Trip_ToUrS"><span class="icon-youtube"></span></a></li>
+					  <li class="ftco-animate"><a href="https://www.linkedin.com/in/utkarsh-sharma-b9a074140/"><span class="icon-linkedin"></span></a></li>  
+					  <!-- <li class="ftco-animate"><a href="https://twitter.com/rishabhnmishra"><span class="icon-twitter"></span></a></li> -->
+					  <li class="ftco-animate"><a href="https://www.facebook.com/share/14ELUBdghqh/"><span class="icon-facebook"></span></a></li>
+				      <li class="ftco-animate"><a href="https://www.instagram.com/_i_am_utkarsh_sharma_?igsh=bjhhc2xhb2d1MzE1"><span class="icon-instagram"></span></a></li>
+					</ul>
+				<br>
+		   </div>
+   </div>
+ </section>
+
+
+ 
+	
+    <footer class="ftco-footer ftco-section">
+		<div class="container">
+		  <div class="row">
+			<div class="col-md-12 text-center">
+  
+			  <p><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+	Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="icon-heart color-danger" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>
+	<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></p>
+			</div>
+		  </div>
+		</div>
+	  </footer>
+
+
+  <!-- loader -->
+  <div id="ftco-loader" class="show fullscreen"><svg class="circular" width="48px" height="48px"><circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee"/><circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#F96D00"/></svg></div>
+
+
+  <script src="js/jquery.min.js"></script>
+  <script src="js/jquery-migrate-3.0.1.min.js"></script>
+  <script src="js/popper.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/jquery.easing.1.3.js"></script>
+  <script src="js/jquery.waypoints.min.js"></script>
+  <script src="js/jquery.stellar.min.js"></script>
+  <script src="js/owl.carousel.min.js"></script>
+  <script src="js/jquery.magnific-popup.min.js"></script>
+  <script src="js/aos.js"></script>
+  <script src="js/jquery.animateNumber.min.js"></script>
+  <script src="js/scrollax.min.js"></script>
+  
+  <script src="js/main.js"></script>
+    
+  </body>
+</html>
